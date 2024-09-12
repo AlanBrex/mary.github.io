@@ -1,0 +1,71 @@
+<!-- Archivo: index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #c70505;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            flex-direction: column; /* Coloca el título y la imagen uno encima del otro */
+            padding: 20px; /* Para que haya espacio en pantallas pequeñas */
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 36px;
+            color: #f5f3f3; /* Color del título */
+            margin-bottom: 20px; /* Espacio entre el título y el GIF */
+            text-align: center;
+        }
+        img {
+            cursor: pointer;
+            width: 150px; /* Ajusta el tamaño del GIF si es necesario */
+            max-width: 200px; /* Tamaño máximo para pantallas grandes */
+            height: auto;
+            border-radius: 10px;
+        }
+        /* Media queries para pantallas muy pequeñas */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 5vw; /* Aumenta el tamaño del texto en pantallas muy pequeñas */
+            }
+            img {
+                width: 50vw; /* La imagen ocupa el 50% del ancho de la pantalla en móviles */
+                max-width: 150px; /* Limitar el tamaño máximo en móviles */
+            }
+        }
+
+         /* styles.css */
+@keyframes colorChange {
+    0% { color: #e70505; } /* Rojo */
+    25% { color: #00FF00; } /* Verde */
+    50% { color: #0000FF; } /* Azul */
+    75% { color: #FFFF00; } /* Amarillo */
+    100% { color: #e70505; } /* Rojo */
+}
+
+.color-changing-title {
+    font-size: 2.2em; /* Tamaño del texto */
+    font-family: Arial, sans-serif;
+    animation: colorChange 5s infinite; /* Cambia el color cada 5 segundos */
+}
+    </style>
+</head>
+<body>
+
+    <!-- Título centrado -->
+    <h1 class="color-changing-title">¡ Bienvenida, mi amor !</h1>    
+    <!-- Imagen GIF que redirige a la página principal -->
+    <a href="main.html">
+        <img src="regalo.gif" alt="Haz clic para comenzar">
+    </a>
+    <h1 class="color-changing-title">¡ Haz click en tu regalo !</h1>  
+</body>
+</html>
